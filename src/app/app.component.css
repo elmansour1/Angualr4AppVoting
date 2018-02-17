@@ -1,0 +1,19 @@
+.mon_menu{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.formulaire{
+	width: 200px;
+}
+
+.couleur-formulaire{
+	background: lightgreen;
+}
+.resultat{
+	margin-top: 50px;
+
+}
+
+.couleur-point{
+	background-color: #aeaeaf; 
+}

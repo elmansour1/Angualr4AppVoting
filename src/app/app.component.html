@@ -1,3 +1,38 @@
-<h1>
-  {{title}}
-</h1>
+<div class="ui fixed container mon_menu">
+	<div class="ui inverted segment">
+		<div class="ui inverted secondary  menu">
+			<a class="active item">Home </a>
+			<a class="item">Messages </a>
+			<a class="item">Amis </a>
+			<div class="right menu">
+			    <div class="item">
+			    	<div class="ui icon input">
+			        	<input type="text" placeholder="Rechercher...">
+			        	<i class="search link icon"></i>
+			    	</div>
+			    </div>
+		    <a href="#" class="ui item active">Déconnexion </a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui container formulaire">
+	<form class="ui form segment couleur-formulaire">
+		<div class="ui header">Add a link </div>
+		<div class="field">
+			<label for="title">Title: </label>
+			<input type="text" name="title" #newtitle>
+		</div>
+		<div class="field">
+			<label for="link">Link :</label>
+			<input type="text" name="link" #newlink>
+		</div>
+		<button (click)="addArticle(newtitle,newlink)" class="ui positive button">Submit Link</button>
+	</form>
+</div>
+
+<div class="ui container resultat">
+	<div class="ui grid posts">
+		<app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
+	</div>
+</div>
